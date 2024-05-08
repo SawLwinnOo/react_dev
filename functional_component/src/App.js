@@ -1,5 +1,5 @@
 import React from 'react';
-
+import State from './components/state';
 
 // in functional component props must be an argument
 let Item = (props)=>{
@@ -18,7 +18,10 @@ let hello_world = () =>{
       <h1>Hello World</h1>
       <ul>
         <Item  name="SLO" email="slo@gmail.com" />
-      </ul>
+      </ul><br/>
+      <p>----------------------</p><br/>
+      <p>use state</p>
+      <State/>
     </div>
   )
 }
