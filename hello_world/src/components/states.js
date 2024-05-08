@@ -10,13 +10,17 @@ class State extends React.Component{
             ]
 
           }
+      nameref = React.createRef();
+      emailref = React.createRef();
 
       add = ()=>{
             let id = this.state.items.length+1;
+            let name = this.nameref.current.value;
+            let email = this.emailref.current.value;
             this.setState({
                   items: [
                         ...this.state.items,
-                        {id, name: "Saw Lwin Oo", email: "sawlwinoo@gmail.com"}
+                        {id, name, email}
                   ]
             })
       }
@@ -36,6 +40,8 @@ class State extends React.Component{
                                     })
                               }
                         </ul>
+                        <input name="Name" type="text" ref={this.nameref} placeholder="Enter Name"/><br/>
+                        <input name="Email" type="text" ref={this.emailref} placeholder="Enter Email"/><br/>
                         <button onClick={this.add}>Add</button>
                   </div>
             )
