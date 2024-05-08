@@ -12,8 +12,7 @@ class HelloWorld extends React.Component {
         <p>----Part of props & Hello World----</p>
         <h1>Hello World</h1>
           <ul>
-            <Item name="SLO"/>
-            <Item email="slo@gmail.com"/>
+            <Item name="SLO" email="slo@gmail.com"/>
           </ul><br/><br/>
         <p>-------Use Of State-------</p>
         <ul>

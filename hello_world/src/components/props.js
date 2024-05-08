@@ -4,7 +4,8 @@ class Item extends React.Component{
       render(){
             return(
                   <div>
-                        <li>{this.props.name} {this.props.email}</li>
+                        <li> name : {this.props.name}</li>
+                        <li> email : {this.props.email}</li>
                   </div>
             );
       }
