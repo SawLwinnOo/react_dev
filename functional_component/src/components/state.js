@@ -1,6 +1,6 @@
 import React, { createRef, useState } from "react";
 
-const Data = props =>{
+const Item = props =>{
       return(
             <div>
                   <li>{props.name}</li>
@@ -13,7 +13,7 @@ const Data = props =>{
 
 const State = props =>{
 
-      let [items, setItems] = React.useState([
+      let [data,setData] = React.useState([
             {id:1, name: "S", email: "s@gmail.com"},
             {id:2, name: "SL", email: "sl@gmail.com"},
       ])
@@ -21,13 +21,13 @@ const State = props =>{
       let nameref = createRef();
       let emailref = createRef();
       let add = () =>{
-            let id = items.length +1
+            let id = data.length +1
             
 
             let name = nameref.current.value;
             let email = emailref.current.value;
-            setItems([
-                  ...items,
+            setData([
+                  ...data,
                   {id, name, email}
             ])
       }
@@ -36,9 +36,9 @@ const State = props =>{
             <div>
                   <h1>Hello SLO</h1>
                   <ul>
-                        {items.map(i =>{
+                        {data.map(i =>{
                               return (
-                                    <Data key={i.id} name={i.name} email={i.email} />
+                                    <Item key={i.id} name={i.name} email={i.email} />
                               )
                         })}
                   </ul>
