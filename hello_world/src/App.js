@@ -1,26 +1,24 @@
 import React from 'react';
+import Item from './components/props';
+import State from './components/states';
 
-class Item extends React.Component {
-
-  render(){
-    return (
-      <div>
-        <li>{this.props.name} {this.props.email}</li>
-      </div>
-    )
-  }
-}
 
 class HelloWorld extends React.Component {
+  
 
   render(){
     return (
       <div>
+        <p>----Part of props & Hello World----</p>
         <h1>Hello World</h1>
           <ul>
             <Item name="SLO"/>
             <Item email="slo@gmail.com"/>
-          </ul>
+          </ul><br/><br/>
+        <p>-------Use Of State-------</p>
+        <ul>
+            <State/>
+        </ul>
       </div>
     )
   }
